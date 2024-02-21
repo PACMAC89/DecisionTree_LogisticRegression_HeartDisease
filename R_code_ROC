@@ -1,0 +1,7 @@
+#BEST FOR AUC
+?coords
+library(ROCit)
+## Warning: package 'ROCit' was built under R version 3.5.2
+ROCit_obj1 <- rocit(score=as.numeric(heart_pred),class=as.numeric(heart_test$HeartDisease))
+plot(ROCit_obj1)
+ROCit_obj1

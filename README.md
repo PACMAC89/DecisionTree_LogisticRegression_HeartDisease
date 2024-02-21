@@ -3,6 +3,7 @@ Machine Learning in Health Economics _ Applying ML algorithms to predict Heart d
 
 -- Logistic Regression (LR) and Decision
 -- Trees (CART algorithm or simply DT)
+--Key difficulty: Balance imbalanced dependent variable with SMOTE (Synthetic Minority Over-sampling TEchnique)
 
 Heart Disease Prediction Based On The Machine Learning Models Logistic
 Regression And Decision Tree

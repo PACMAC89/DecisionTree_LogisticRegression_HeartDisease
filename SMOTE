@@ -1,0 +1,3 @@
+#SMOTE
+heart_train <- smotefamily::SMOTE(heart_train[,-6],heart_train$stroke)
+View(heart_train)

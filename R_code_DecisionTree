@@ -1,0 +1,28 @@
+#- "class" for a classification tree 			
+#- "anova" for a regression tree	
+options(repr.plot.width=6,repr.plot.height=5)
+heart_mod1 <- rpart(as.numeric(heart_trainClass)~heart_trainStroke+heart_trainSex +heart_trainSmoking +heart_trainAlcoholDrinking 
+                      +heart_trainPhysicalHealth 
+                      +heart_trainMentalHealth 
+                    +heart_trainDiffWalking +heart_trainAgeCategory +
+                      heart_trainDiabetic+
+                      heart_trainPhysicalActivity+
+                    heart_trainSleepTime+
+                    heart_trainAsthma+
+                    heart_trainKidneyDisease+ 
+                    heart_trainSkinCancer+
+                    heart_trainBMI+
+                    heart_trainFair +
+                    heart_trainGood +
+                    heart_train$data$Very_Good+
+                    heart_trainExcellent, 
+                    data=heart_train$data, method="class",
+                    cp = 0.001, minsplit=20, minbucket=2, maxdepth=20)
+
+
+
+#control=rpart.control(minsplit=0,cp=0.001)
+
+#the cp table showing the improvement in cost complexity at each node
+printcp(heart_mod1) 
+summary(heart_mod1)

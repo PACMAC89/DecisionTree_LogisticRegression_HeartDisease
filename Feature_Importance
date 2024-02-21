@@ -1,0 +1,11 @@
+#Plot feature Importance and the decision tree
+
+library(rpart.plot)
+
+
+
+#Decision trees are also useful for examining feature importance
+importances <- varImp(heart_mod1) 
+?varImp
+importances %>%
+  arrange(desc(Overall))
